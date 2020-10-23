@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>        
+        <h3>
+            Opdr.2: 
+            <input type="text" id="eeeee1">
+            <input type="button" value="Eeeee1" onclick="opdr2()">
+        </h3>   
+    </body>
+
+    <script>
+        function opdr2(){
+            var woord = document.getElementById("eeeee1").value;
+            for( var i = 0 ; i < woord.length ; i++ ){
+                if( "e" == woord[i] ){
+                    alert("Er zit een 'e' in.");
+                } 
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>   
+        <h3>
+        Opdr.1: 
+        <input type="text" id="groetjes">
+        <input type="button" value="Groetjes" onclick="opdr1()">
+        </h3>
+    </body>
+
+    <script>
+        function opdr1(){
+            var groet = document.getElementById("groetjes").value;
+            if( groet == "Hallo" ){
+                alert("Welkom.");
+            }
+            if( groet == "Doei" ){
+                alert("Tot ziens.");
+            }
+        }
+    </script>
+</html>
