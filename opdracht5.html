@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h3>
+            Opdr.5:
+            <input type="button" id="knopa" value="Knop A" onclick="opdr4('A')">
+            <input type="button" id="knopb" value="Knop B" onclick="opdr4('B')">
+            <input type="button" id="knopc" value="Knop C" onclick="opdr4('C')">
+            <input type="button" id="knopd" value="Knop D" onclick="opdr4('D')">
+            <div id="check">
+                <p id="letter"></p>
+            </div>
+        </h3>
+    </body>
+
+    <script>
+        function opdr4(deknop){
+            var dezin = "Je klikte op knop "
+            var totaal = dezin+deknop
+            var appenddata = document.getElementById("letter")
+            var logdata = document.getElementById("check").textContent;
+            var include = logdata.includes(totaal);
+            if( include == true ){
+                alert("Je klikte al op knop " + deknop + " geklikt" );
+            }
+            else{
+                appenddata.insertAdjacentHTML("afterend", "<p>" + totaal + "</p>");
+            } 
+        }
+    </script>
+</html>
