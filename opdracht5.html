@@ -9,10 +9,10 @@
     <body>
         <h3>
             Opdr.5:
-            <input type="button" id="knopa" value="Knop A" onclick="opdr4('A')">
-            <input type="button" id="knopb" value="Knop B" onclick="opdr4('B')">
-            <input type="button" id="knopc" value="Knop C" onclick="opdr4('C')">
-            <input type="button" id="knopd" value="Knop D" onclick="opdr4('D')">
+            <input type="button" id="knopa" value="Knop A" onclick="opdr5('A')">
+            <input type="button" id="knopb" value="Knop B" onclick="opdr5('B')">
+            <input type="button" id="knopc" value="Knop C" onclick="opdr5('C')">
+            <input type="button" id="knopd" value="Knop D" onclick="opdr5('D')">
             <div id="check">
                 <p id="letter"></p>
             </div>
@@ -20,17 +20,19 @@
     </body>
 
     <script>
-        function opdr4(deknop){
-            var dezin = "Je klikte op knop "
-            var totaal = dezin+deknop
+        function opdr5(deknop){
+            var zin1 = "Je klikte op knop "
+            var totaal1 = zin1+deknop
+            var zin2 = "Je klikte al op knop "
+            var totaal2 = zin2+deknop
             var appenddata = document.getElementById("letter")
             var logdata = document.getElementById("check").textContent;
-            var include = logdata.includes(totaal);
+            var include = logdata.includes(totaal1);
             if( include == true ){
-                alert("Je klikte al op knop " + deknop + " geklikt" );
+                alert(totaal2);
             }
             else{
-                appenddata.insertAdjacentHTML("afterend", "<p>" + totaal + "</p>");
+                appenddata.insertAdjacentHTML("afterend", "<p>" + totaal1 + "</p>");
             } 
         }
     </script>

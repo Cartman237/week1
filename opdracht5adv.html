@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h3>
+            Opdr.5:
+            <input type="button" value="Knop A" onclick="opdr5(0)">
+            <input type="button" value="Knop B" onclick="opdr5(1)">
+            <input type="button" value="Knop C" onclick="opdr5(2)">
+            <input type="button" value="Knop D" onclick="opdr5(3)">
+            <div id="check">
+                <p id="letter"></p>
+            </div>
+        </h3>
+    </body>
+
+    <script>
+        var knoppen = ["Knop A", "Knop B","Knop C","Knop D"];
+        var teller = [0, 0, 0, 0];
+        function opdr5(deknop){
+            teller[deknop]++;
+            console.log(knoppen[deknop]);
+            console.log(teller[deknop]);
+            var zin1 = "Je klikte op "
+            var totaal1 = zin1+knoppen[deknop]
+            var totaal2 = "Je hebt al " + teller[deknop] + " geklikt op " + knoppen[deknop]
+            var appenddata = document.getElementById("letter")
+            if( teller[deknop] > 1 ){
+                alert(totaal2);
+            }
+            else{
+                appenddata.insertAdjacentHTML("afterend", "<p>" + totaal1 + "</p>");
+            }
+            document.getElementById("Clicks").innerHTML = clicks;
+        }
+    </script>
+</html>
