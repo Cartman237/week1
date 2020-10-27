@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>   
+        <h3>
+            Opdr.7:
+            <button onclick="opdr7a()">Seizoen 1</button>
+            <button onclick="opdr7b()">Seizoen 2</button>
+            <button onclick="opdr7c()">Afbeelding vergelijker</button>
+            <p>
+                <img id="Seizoen1" style="width:25%">
+                <img id="Seizoen2" style="width:25%">
+            </p>
+        </h3>
+    </body>
+
+    <script>
+        var seizoen1 = new Array()
+        seizoen1[0] = "https://i.pinimg.com/originals/a2/99/b2/a299b225a0fee4a6e687d9b89f22d03a.jpg"
+        seizoen1[1] = "https://tvplus.be/sites/default/files/programmas/hallo_zomer_button.png"
+        seizoen1[2] = "https://image.freepik.com/vrije-vector/hallo-herfst-illustratie-met-boom-plant_24911-51617.jpg"
+        seizoen1[3] = "http://www.cactuscountryproperty.com/wp-content/uploads/2015/12/11-25-winter.jpg"
+        var img1Number = 0
+
+        var seizoen2 = new Array()
+        seizoen2[0] = "https://i.pinimg.com/originals/a2/99/b2/a299b225a0fee4a6e687d9b89f22d03a.jpg"
+        seizoen2[1] = "https://tvplus.be/sites/default/files/programmas/hallo_zomer_button.png"
+        seizoen2[2] = "https://image.freepik.com/vrije-vector/hallo-herfst-illustratie-met-boom-plant_24911-51617.jpg"
+        seizoen2[3] = "http://www.cactuscountryproperty.com/wp-content/uploads/2015/12/11-25-winter.jpg"
+        var img2Number = 0
+
+        function opdr7a(){
+            img1Number++
+            if( img1Number == seizoen1.length )
+                img1Number = 0
+            document.images["Seizoen1"].src = seizoen1[img1Number]
+        }
+
+        function opdr7b(){
+            img2Number++
+            if( img2Number == seizoen2.length )
+                img2Number = 0
+            document.images["Seizoen2"].src = seizoen2[img2Number]
+        }
+
+        function opdr7c(){
+            if( img1Number == img2Number ){
+                console.log("HETZELFDE")
+            }
+            else{
+                console.log("NIET HETZELFDE")
+            }
+        }
+    </script>
+</html>
