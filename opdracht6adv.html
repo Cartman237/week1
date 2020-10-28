@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title style="font-family: Tahoma;">Week 1. Opdracht 6.</title>
+        <title style="font-family: Tahoma;">Week 1. Opdracht 6. Advanced.</title>
     </head>
 
     <body>   
@@ -11,8 +11,9 @@
             Opdr.6:
             <button onclick="opdr6()">Een seizoen</button>
             <p>
-                <img id="Seizoen" style="width:25%">
+                <img id="Seizoen" style="width:25%" src="https://i.pinimg.com/originals/a2/99/b2/a299b225a0fee4a6e687d9b89f22d03a.jpg">
             </p>
+            <p id="teller" style="font-family: Tahoma;"></p>
         </h3>
     </body>
 
@@ -23,11 +24,18 @@
         seizoen1[2] = "https://image.freepik.com/vrije-vector/hallo-herfst-illustratie-met-boom-plant_24911-51617.jpg"
         seizoen1[3] = "http://www.cactuscountryproperty.com/wp-content/uploads/2015/12/11-25-winter.jpg"
         var imgNumber = 0
+        var teller = 0
 
         function opdr6(){
             imgNumber++
-            if( imgNumber == seizoen1.length )
+            teller++
+            var insert = document.getElementById("teller")
+            if( imgNumber == seizoen1.length ){
                 imgNumber = 0
+            }
+            if( teller > 11 ){
+                insert.insertAdjacentHTML("afterend", "<p>" + "U heeft het derde jaar bereikt." + "</p>");
+            }
             document.images["Seizoen"].src = seizoen1[imgNumber]
         }
     </script>
